@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000">
+    <!--We add a Scroll view in order to prevent the diassapearring of the button at the end of the textView -->
+    <!--From here-->
+    <ScrollView android:id="@+id/ScrollView01"
+		android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:isScrollContainer="true" 
+        android:scrollbarAlwaysDrawVerticalTrack="true" 
+        android:scrollbarStyle="outsideInset" 
+        android:scrollbars="vertical">
+		<LinearLayout android:orientation="vertical"
+	        android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"> <!--ToHere-->
+	    	<TextView
+	    	    android:id="@+id/title"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:overScrollMode="always"
+	    	    android:text="title goes here ...."
+	    	    android:textColor="#FFFFFF"
+	    	    android:textSize="23sp"
+	    	    android:textStyle="italic" />
+
+	    	<ImageView
+	    	    android:id="@+id/imageDesc"
+	    	    android:layout_width="wrap_content"
+	    	    android:layout_height="wrap_content"
+	    	    android:src="@android:drawable/ic_menu_gallery" />
+
+	        <TextView
+			    android:id="@+id/storybox"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:autoLink="web|email"
+			    android:overScrollMode="always"
+			    android:text="story goes here ...."
+			    android:textColor="#FFFFFF"
+			    android:textStyle="bold" />
+			<Button
+			    android:id="@+id/back"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:overScrollMode="always"
+			    android:text="Back" />
+	    </LinearLayout><!--To here-->
+    </ScrollView><!--And Here -->
+</LinearLayout>
